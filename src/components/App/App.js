@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import axios from "axios";
 
+import { cities } from "../../utils/cities";
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -10,6 +12,7 @@ class App extends Component {
 
     this.state = {
       city: "Краснодар",
+      newCity: false,
       // data api
       base: null,
       clouds: {
@@ -116,17 +119,47 @@ class App extends Component {
     this.setState({
       city: e.target.value,
     });
+  };
+
+  readCity = (city) => {
+    const idx = cities.findIndex((el) => el.city === city);
+
+    this.setState((state) => {
+      return {
+        city: cities[idx].city,
+        newCity: !state.newCity,
+      };
+    });
+  };
+
+  updateCity = (e) => {
+    e.preventDefault();
     this.getResoures(this.state.city);
+    this.setState((state) => {
+      return {
+        newCity: !state.newCity,
+      };
+    });
   };
 
   render() {
     return (
       <>
-        <input
-          type="text"
-          value={this.state.city}
-          onChange={this.newCityWeather}
-        />
+        <h2>{this.state.name}</h2>
+        {this.state.newCity ? (
+          <form onSubmit={this.updateCity}>
+            <input type="text" value={this.state.city} />
+            <button>Submit</button>
+          </form>
+        ) : (
+          <ul>
+            {cities.map((item) => (
+              <li key={item.id} onClick={() => this.readCity(item.city)}>
+                {item.city}
+              </li>
+            ))}
+          </ul>
+        )}
       </>
     );
   }
