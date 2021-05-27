@@ -11,6 +11,7 @@ class App extends Component {
 
     this.state = {
       localCity: "",
+      localCityBool: false,
       city: "Краснодар",
       newCity: false,
 
@@ -168,6 +169,17 @@ class App extends Component {
       };
     });
   };
+
+  changedWeatherCityToLocal = () => {
+    this.setState((state) => {
+      return {
+        city: state.localCity,
+        localCityBool: !state.localCityBool,
+        newCity: !state.newCity,
+      }
+    });
+    this.getResoures(this.state.city);
+  }
 
   render() {
     return (
