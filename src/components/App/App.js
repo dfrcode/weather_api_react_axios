@@ -7,6 +7,8 @@ import { cities } from "../../utils/cities";
 
 import { FaLocationArrow } from "react-icons/fa";
 
+import fewClouds from '../../image/few_clouds.png';
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -163,6 +165,7 @@ class App extends Component {
     this.setState((state) => {
       return {
         newCity: !state.newCity,
+        changeCityBtn: false,
       };
     });
   };
@@ -187,6 +190,14 @@ class App extends Component {
     });
   };
 
+  enterMenu = () => {
+    this.setState((state) => {
+      return {
+        changeCityBtn: !state.changeCityBtn,
+      }
+    });
+  }
+
   render() {
     return (
       <>
@@ -197,6 +208,7 @@ class App extends Component {
               className="change-city"
               type="button"
               value="Сменить город"
+              onClick={this.enterMenu}
             />
             <FaLocationArrow className="icon-location" />
             <input
@@ -228,31 +240,39 @@ class App extends Component {
         </div>
 
         {this.state.newCity ? (
-          <form onSubmit={this.updateCity}>
-            <input type="text" value={this.state.city} />
-            <button>Submit</button>
+          <form className="form-city" onSubmit={this.updateCity}>
+            <input className="enter-city" type="text" placeholder={this.state.city} />
+            <button className="btn-ok">Ok</button>
           </form>
-        ) : (
-          <ul className="list-city">
-            {cities.map((item) => (
-              <li
-                className="list-city-item"
-                key={item.id}
-                onClick={() => this.readCity(item.city)}
-              >
-                {item.city}
-              </li>
-            ))}
-          </ul>
-        )}
+        ) :
+              this.state.changeCityBtn ? <ul className="list-city">
+                {cities.map((item) => (
+                    <li
+                        className="list-city-item"
+                        key={item.id}
+                        onClick={() => this.readCity(item.city)}
+                    >
+                      {item.city}
+                    </li>
+                ))}
+              </ul> : null
+        }
 
         <div className="box-weather">
-          <p className="degrees">
-            {this.state.celsius && !this.state.fahrenheit
-              ? Math.floor(this.state.main.temp - 273.15)
-              : Math.floor(((this.state.main.temp - 273.15) * 9) / 5 + 32)}
-            &deg;
-          </p>
+          <div className="box-degrees">
+            {
+              this.state.weather.icon === '01d' || this.state.weather.icon === '01n' ? <img style={{width: "100px"}} src={fewClouds} alt="few clouds"/> :
+                  this.state.weather.icon === '02d' || this.state.weather.icon === '02n' ? <img style={{width: "150px"}} src={fewClouds} alt="few clouds"/> : null
+            }
+
+            <p className="degrees">
+              {this.state.celsius && !this.state.fahrenheit
+                  ? Math.floor(this.state.main.temp - 273.15)
+                  : Math.floor(((this.state.main.temp - 273.15) * 9) / 5 + 32)}
+              &deg;
+            </p>
+          </div>
+
           <p className="weather-description">
             {this.state.weather.description}
           </p>
