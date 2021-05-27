@@ -7,7 +7,15 @@ import { cities } from "../../utils/cities";
 
 import { FaLocationArrow } from "react-icons/fa";
 
-import fewClouds from '../../image/few_clouds.png';
+import sun from "../../image/sun.svg";
+import cloud from "../../image/cloud.svg";
+import cloudy from "../../image/cloudy.svg";
+import broken_cloudy from "../../image/broken_cloudy.svg";
+import snowy from "../../image/snowy.svg";
+import rainy from "../../image/rainy.svg";
+import storm from "../../image/storm.svg";
+import snowflake from "../../image/snowflake.svg";
+import mist from "../../image/mist.svg";
 
 class App extends Component {
   constructor(props) {
@@ -194,9 +202,9 @@ class App extends Component {
     this.setState((state) => {
       return {
         changeCityBtn: !state.changeCityBtn,
-      }
+      };
     });
-  }
+  };
 
   render() {
     return (
@@ -241,34 +249,69 @@ class App extends Component {
 
         {this.state.newCity ? (
           <form className="form-city" onSubmit={this.updateCity}>
-            <input className="enter-city" type="text" placeholder={this.state.city} />
+            <input
+              className="enter-city"
+              type="text"
+              placeholder={this.state.city}
+            />
             <button className="btn-ok">Ok</button>
           </form>
-        ) :
-              this.state.changeCityBtn ? <ul className="list-city">
-                {cities.map((item) => (
-                    <li
-                        className="list-city-item"
-                        key={item.id}
-                        onClick={() => this.readCity(item.city)}
-                    >
-                      {item.city}
-                    </li>
-                ))}
-              </ul> : null
-        }
+        ) : this.state.changeCityBtn ? (
+          <ul className="list-city">
+            {cities.map((item) => (
+              <li
+                className="list-city-item"
+                key={item.id}
+                onClick={() => this.readCity(item.city)}
+              >
+                {item.city}
+              </li>
+            ))}
+          </ul>
+        ) : null}
 
         <div className="box-weather">
           <div className="box-degrees">
-            {
-              this.state.weather.icon === '01d' || this.state.weather.icon === '01n' ? <img style={{width: "100px"}} src={fewClouds} alt="few clouds"/> :
-                  this.state.weather.icon === '02d' || this.state.weather.icon === '02n' ? <img style={{width: "150px"}} src={fewClouds} alt="few clouds"/> : null
-            }
-
+            {this.state.weather.icon === "01d" ||
+            this.state.weather.icon === "01n" ? (
+              <img style={{ width: "100px" }} src={sun} alt="few clouds" />
+            ) : this.state.weather.icon === "02d" ||
+              this.state.weather.icon === "02n" ? (
+              <img style={{ width: "100px" }} src={cloudy} alt="few clouds" />
+            ) : this.state.weather.icon === "03d" ||
+              this.state.weather.icon === "03n" ? (
+              <img style={{ width: "100px" }} src={cloud} alt="few clouds" />
+            ) : this.state.weather.icon === "04d" ||
+              this.state.weather.icon === "04n" ? (
+              <img
+                style={{ width: "100px" }}
+                src={broken_cloudy}
+                alt="few clouds"
+              />
+            ) : this.state.weather.icon === "09d" ||
+              this.state.weather.icon === "09n" ? (
+              <img style={{ width: "100px" }} src={snowy} alt="few clouds" />
+            ) : this.state.weather.icon === "10d" ||
+              this.state.weather.icon === "10n" ? (
+              <img style={{ width: "100px" }} src={rainy} alt="few clouds" />
+            ) : this.state.weather.icon === "11d" ||
+              this.state.weather.icon === "11n" ? (
+              <img style={{ width: "100px" }} src={storm} alt="few clouds" />
+            ) : this.state.weather.icon === "13d" ||
+              this.state.weather.icon === "13n" ? (
+              <img
+                style={{ width: "100px" }}
+                src={snowflake}
+                alt="few clouds"
+              />
+            ) : this.state.weather.icon === "50d" ||
+              this.state.weather.icon === "50n" ? (
+              <img style={{ width: "100px" }} src={mist} alt="few clouds" />
+            ) : null}
             <p className="degrees">
               {this.state.celsius && !this.state.fahrenheit
-                  ? Math.floor(this.state.main.temp - 273.15)
-                  : Math.floor(((this.state.main.temp - 273.15) * 9) / 5 + 32)}
+                ? Math.floor(this.state.main.temp - 273.15)
+                : Math.floor(((this.state.main.temp - 273.15) * 9) / 5 + 32)}
               &deg;
             </p>
           </div>
@@ -283,7 +326,24 @@ class App extends Component {
             <li>
               <p className="title">Ветер</p>
               <p className="description">
-                {Math.floor(this.state.wind.speed)} м/с, западный
+                {Math.floor(this.state.wind.speed)} м/с,{" "}
+                {this.state.wind.deg === 0
+                  ? "западный"
+                  : this.state.wind.deg > 0 && this.state.wind.deg < 90
+                  ? "северо-западный"
+                  : this.state.wind.deg === 90
+                  ? "северный"
+                  : this.state.wind.deg > 90 && this.state.wind.deg < 180
+                  ? "северо-восточный"
+                  : this.state.wind.deg === 180
+                  ? "восточный"
+                  : this.state.wind.deg > 180 && this.state.wind.deg < 270
+                  ? "юго-восточный"
+                  : this.state.wind.deg === 270
+                  ? "южный"
+                  : this.state.wind.deg > 270 && this.state.wind.deg < 360
+                  ? "юго-западный"
+                  : null}
               </p>
             </li>
             <li>
