@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import axios from "axios";
 
 import { cities } from "../../utils/cities";
-
 class App extends Component {
   constructor(props) {
     super(props);
@@ -11,8 +10,10 @@ class App extends Component {
     this.apiLang = "ru";
 
     this.state = {
+      localCity: "",
       city: "Краснодар",
       newCity: false,
+
       // data api
       base: null,
       clouds: {
@@ -59,8 +60,34 @@ class App extends Component {
       },
     };
 
+    // this.getCityUser();
     this.getResoures(this.state.city);
   }
+
+  componentDidMount() {
+    navigator.geolocation.getCurrentPosition(
+      async (position) => {
+        const res = await axios.get(
+          `${this.apiPath}?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${process.env.REACT_APP_API_KEY}&lang=${this.apiLang}`
+        );
+        console.log(res.data.name);
+        this.setState((state) => {
+          return {
+            ...state,
+            localCity: res.data.name,
+          }
+        });
+      },
+      (err) => console.log(err)
+    );
+  }
+
+  // async getCityUser() {
+  //   const res = await axios.get(
+  //     `${this.apiPath}?lat=${this.state.lat}&lon=${this.state.lon}&appid=${process.env.REACT_APP_API_KEY}&lang=${this.apiLang}`
+  //   );
+  //   console.log(res.data.name);
+  // }
 
   async getResoures(city) {
     const res = await axios.get(
@@ -145,7 +172,8 @@ class App extends Component {
   render() {
     return (
       <>
-        <h2>{this.state.name}</h2>
+        <input type="button" value="Сменить город" />
+        <input type="button" value="Мое местоположение" onClick={this.changedWeatherCityToLocal}/>
         {this.state.newCity ? (
           <form onSubmit={this.updateCity}>
             <input type="text" value={this.state.city} />
