@@ -1,0 +1,192 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: #498cec;
+  font-family: Lato, sans-serif;
+}
+
+.box-city {
+  position: fixed;
+  top: 75px;
+  left: 99px;
+}
+
+.city-name {
+  color: #fff;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 50px;
+  line-height: 60px;
+  padding-bottom: 9px;
+}
+
+.btn-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.change-city,
+.local-city {
+  cursor: pointer;
+  color: #fff;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  border: none;
+  outline: none;
+}
+
+.change-city {
+  padding-right: 29px;
+}
+
+.icon-location {
+  color: #fff;
+  margin-right: 11.51px;
+}
+
+.list-city {
+  position: fixed;
+  top: 170px;
+  left: 99px;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  overflow: hidden;
+  width: 150px;
+  height: 100px;
+  padding: 10px;
+  border-radius: 3px;
+  background-color: #fff;
+  box-shadow: 0 2px 17px #000;
+  z-index: 100;
+}
+
+.list-city-item {
+  background-color: #fff;
+}
+
+/* box-check-degrees */
+.box-check-degrees {
+  position: fixed;
+  top: 81px;
+  right: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 94px;
+  height: 29px;
+}
+
+.degree-icon {
+  color: #fff;
+  padding-right: 9px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.celsius {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 38.5px;
+  height: 100%;
+  border: 1px solid #fff;
+  border-radius: 8px 0 0 8px;
+  color: #fff;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.fahrenheit {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 38.5px;
+  height: 100%;
+  border: 1px solid #fff;
+  border-radius: 0 8px 8px 0;
+  color: #fff;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.active {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.box-weather {
+  position: fixed;
+  top: calc(50% - 133px);
+  width: 100%;
+  height: 266px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.degrees {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 180px;
+  line-height: 216px;
+  text-align: center;
+  color: #fff;
+}
+
+.weather-description {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 25px;
+  line-height: 30px;
+  text-align: center;
+  color: #fff;
+}
+
+.list-city-info-weather {
+  width: 100%;
+  position: fixed;
+  bottom: 122px;
+  right: 0;
+}
+
+.list-city-info-weather ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 101px;
+}
+
+.list-city-info-weather ul li {
+  color: #fff;
+}
+
+.title {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  padding-bottom: 10px;
+}
+
+.description {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 25px;
+  line-height: 30px;
+}
