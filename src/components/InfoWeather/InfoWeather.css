@@ -1,0 +1,263 @@
+.list-city-info-weather {
+  width: 100%;
+}
+
+.list-city-info-weather ul {
+  list-style: none;
+}
+
+.list-city-info-weather ul li:nth-child(1) {
+  position: fixed;
+  left: 7.39%;
+  right: 79.06%;
+  top: 82.03%;
+  bottom: 11.91%;
+}
+
+.list-city-info-weather ul li:nth-child(2) {
+  position: fixed;
+  left: 30.23%;
+  right: 58.13%;
+  top: 82.03%;
+  bottom: 11.91%;
+}
+
+.list-city-info-weather ul li:nth-child(3) {
+  position: fixed;
+  left: 53.51%;
+  right: 39.75%;
+  top: 82.03%;
+  bottom: 11.91%;
+}
+
+.list-city-info-weather ul li:nth-child(4) {
+  position: fixed;
+  left: 74.3%;
+  right: 13.54%;
+  top: 82.03%;
+  bottom: 11.91%;
+}
+
+.title {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  mix-blend-mode: normal;
+  opacity: 0.6;
+  margin-bottom: 10px;
+}
+
+.description {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 25px;
+  line-height: 30px;
+}
+
+@media screen and (max-height: 640px) {
+  .title {
+    font-size: 15px;
+    line-height: 14px;
+  }
+
+  .description {
+    font-size: 18px;
+    line-height: 10px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .list-city-info-weather ul li:nth-child(1) {
+    left: 13%;
+    right: 50.53%;
+    top: 76.01%;
+    bottom: 17.69%;
+  }
+
+  .list-city-info-weather ul li:nth-child(2) {
+    left: 61.73%;
+    right: 7.6%;
+    top: 76.01%;
+    bottom: 17.69%;
+  }
+
+  .list-city-info-weather ul li:nth-child(3) {
+    left: 13%;
+    right: 50.53%;
+    top: 87.56%;
+    bottom: 6.15%;
+  }
+
+  .list-city-info-weather ul li:nth-child(4) {
+    left: 61.73%;
+    right: 7.6%;
+    top: 87.56%;
+    bottom: 6.15%;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .list-city-info-weather ul li:nth-child(1) {
+    left: 13%;
+    right: 50.53%;
+    top: 76.01%;
+    bottom: 17.69%;
+  }
+
+  .list-city-info-weather ul li:nth-child(2) {
+    left: 61.73%;
+    right: 7.6%;
+    top: 76.01%;
+    bottom: 17.69%;
+  }
+
+  .list-city-info-weather ul li:nth-child(3) {
+    left: 13%;
+    right: 50.53%;
+    top: 87.56%;
+    bottom: 6.15%;
+  }
+
+  .list-city-info-weather ul li:nth-child(4) {
+    left: 61.73%;
+    right: 7.6%;
+    top: 87.56%;
+    bottom: 6.15%;
+  }
+
+  .title {
+    font-size: 15px;
+    line-height: 18px;
+  }
+
+  .description {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .list-city-info-weather ul li:nth-child(1) {
+    left: 5.07%;
+    right: 50.53%;
+    top: 76.01%;
+    bottom: 17.69%;
+  }
+
+  .list-city-info-weather ul li:nth-child(2) {
+    left: 61.73%;
+    right: 7.6%;
+    top: 76.01%;
+    bottom: 17.69%;
+  }
+
+  .list-city-info-weather ul li:nth-child(3) {
+    left: 5.07%;
+    right: 50.53%;
+    top: 87.56%;
+    bottom: 6.15%;
+  }
+
+  .list-city-info-weather ul li:nth-child(4) {
+    left: 61.73%;
+    right: 7.6%;
+    top: 87.56%;
+    bottom: 6.15%;
+  }
+
+  .title {
+    font-size: 15px;
+    line-height: 18px;
+  }
+
+  .description {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .list-city-info-weather ul li:nth-child(1) {
+    left: 5.87%;
+    right: 58.4%;
+    top: 76.01%;
+    bottom: 17.69%;
+  }
+
+  .list-city-info-weather ul li:nth-child(2) {
+    left: 51.73%;
+    right: 17.6%;
+    top: 76.01%;
+    bottom: 17.69%;
+  }
+
+  .list-city-info-weather ul li:nth-child(3) {
+    left: 6.4%;
+    right: 73.07%;
+    top: 87.56%;
+    bottom: 6.15%;
+  }
+
+  .list-city-info-weather ul li:nth-child(4) {
+    left: 52.27%;
+    right: 10.93%;
+    top: 87.56%;
+    bottom: 6.15%;
+  }
+
+  .title {
+    font-size: 15px;
+    line-height: 18px;
+  }
+
+  .description {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
+@media screen and (max-height: 640px) {
+
+  .list-city-info-weather ul li:nth-child(1) {
+    position: fixed;
+    left: 7.39%;
+    right: 79.06%;
+    top: 82.03%;
+    bottom: 11.91%;
+  }
+  
+  .list-city-info-weather ul li:nth-child(2) {
+    position: fixed;
+    left: 30.23%;
+    right: 58.13%;
+    top: 82.03%;
+    bottom: 11.91%;
+  }
+  
+  .list-city-info-weather ul li:nth-child(3) {
+    position: fixed;
+    left: 53.51%;
+    right: 39.75%;
+    top: 82.03%;
+    bottom: 11.91%;
+  }
+  
+  .list-city-info-weather ul li:nth-child(4) {
+    position: fixed;
+    left: 74.3%;
+    right: 13.54%;
+    top: 82.03%;
+    bottom: 11.91%;
+  }
+
+  .title {
+    font-size: 13px;
+    line-height: 10px;
+  }
+
+  .description {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}

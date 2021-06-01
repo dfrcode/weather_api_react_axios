@@ -1,8 +1,9 @@
 import React from "react";
 
-const UpdateCity = (props) => {
+import "./UpdateCity.css";
 
-    const { updateCity, city } = props;
+const UpdateCity = (props) => {
+  const { updateCity, city } = props;
 
   return (
     <form className="form-city" onSubmit={updateCity}>

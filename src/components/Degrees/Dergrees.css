@@ -1,0 +1,75 @@
+.box-check-degrees {
+  position: fixed;
+  top: 81px;
+  right: 75px;
+  width: 99px;
+  height: 29px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.degree-icon {
+  padding-right: 9px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  mix-blend-mode: normal;
+  opacity: 0.4;
+}
+
+.celsius,
+.fahrenheit {
+  width: calc(77px / 2);
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #fff;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  mix-blend-mode: normal;
+  opacity: 0.4;
+  transition: opacity 0.2s linear;
+}
+
+.celsius {
+  border-radius: 8px 0 0 8px;
+}
+
+.fahrenheit {
+  border-radius: 0 8px 8px 0;
+}
+
+.active {
+  background-color: rgba(255, 255, 255, 0.4);
+  opacity: 1;
+}
+
+@media screen and (max-height: 640px) {
+  .box-check-degrees {
+    top: 30px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .box-check-degrees {
+    left: 70.47%;
+    right: 5.47%;
+    top: 3.9%;
+    bottom: 91.75%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .box-check-degrees {
+    left: 63.47%;
+    right: 11.47%;
+    top: 3.9%;
+    bottom: 91.75%;
+  }
+}

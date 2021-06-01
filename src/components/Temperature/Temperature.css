@@ -1,0 +1,22 @@
+.degrees {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 180px;
+  line-height: 216px;
+  text-align: center;
+  margin-left: 20px;
+}
+
+@media screen and (max-height: 640px) {
+  .degrees {
+    font-size: 130px;
+    line-height: 100px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .degrees {
+    font-size: 120px;
+    line-height: 155px;
+  }
+}

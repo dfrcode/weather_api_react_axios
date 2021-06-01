@@ -1,5 +1,7 @@
 import React from "react";
 
+import "./Dergrees.css";
+
 const Degrees = (props) => {
   return (
     <div className="box-check-degrees">

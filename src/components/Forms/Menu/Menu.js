@@ -1,5 +1,7 @@
 import React from "react";
 
+import "./Menu.css";
+
 import { cities } from "../../../utils/cities";
 
 const Menu = (props) => {

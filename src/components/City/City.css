@@ -1,0 +1,259 @@
+.box-city p {
+  position: fixed;
+  top: 75px;
+  left: 99px;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 50px;
+  line-height: 60px;
+}
+
+.change-city {
+  position: fixed;
+  top: 144px;
+  left: 101px;
+  cursor: pointer;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  mix-blend-mode: normal;
+  opacity: 0.6;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.icon-location {
+  position: fixed;
+  top: 148px;
+  left: 262px;
+  font-size: 14px;
+  line-height: 22px;
+  mix-blend-mode: normal;
+  opacity: 0.6;
+}
+
+.local-city {
+  position: fixed;
+  top: 144px;
+  left: 292px;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  mix-blend-mode: normal;
+  opacity: 0.6;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+@media screen and (max-height: 640px) {
+  .box-city p {
+    font-size: 32px;
+    top: 10px;
+  }
+
+  .change-city {
+    top: 70px;
+  }
+
+  .icon-location {
+    top: 77px;
+  }
+
+  .local-city {
+    top: 73px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .box-city p {
+    left: 13%;
+  }
+
+  .change-city {
+    left: 13%;
+  }
+
+  .icon-location {
+    left: 30%;
+  }
+
+  .local-city {
+    left: 33%;
+  }
+}
+
+@media screen and (max-width: 730px) {
+  .box-city p {
+    left: 13%;
+  }
+
+  .change-city {
+    left: 13%;
+  }
+
+  .icon-location {
+    left: 33%;
+  }
+
+  .local-city {
+    left: 36%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .box-city p {
+    left: 13%;
+  }
+
+  .change-city {
+    left: 13%;
+  }
+
+  .icon-location {
+    left: 36%;
+  }
+
+  .local-city {
+    left: 40%;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .box-city p {
+    left: 13%;
+  }
+
+  .change-city {
+    left: 13%;
+  }
+
+  .icon-location {
+    left: 40%;
+  }
+
+  .local-city {
+    left: 45%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .box-city p {
+    height: 36px;
+    left: 5.07%;
+    right: 74.93%;
+    top: calc(50% - 36px / 2 - 296.5px);
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 36px;
+  }
+
+  .change-city {
+    height: 18px;
+    left: 5.6%;
+    right: 66.4%;
+    top: calc(50% - 18px / 2 - 251.5px);
+    font-size: 15px;
+    line-height: 18px;
+  }
+
+  .icon-location {
+    left: calc(26.29% + 33px);
+    right: 24.13%;
+    top: calc(50% - 18px / 2 - 251.5px);
+    bottom: 22.08%;
+  }
+
+  .local-city {
+    height: 18px;
+    left: calc(26.29% + 33px + 25px);
+    right: 9.33%;
+    top: calc(50% - 18px / 2 - 251.5px);
+    font-size: 15px;
+    line-height: 18px;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .box-city p {
+    height: 36px;
+    left: 5.07%;
+    right: 74.93%;
+    top: calc(50% - 36px / 2 - 296.5px);
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 36px;
+  }
+
+  .change-city {
+    height: 18px;
+    left: 5.6%;
+    right: 66.4%;
+    top: calc(50% - 18px / 2 - 251.5px);
+    font-size: 15px;
+    line-height: 18px;
+  }
+
+  .icon-location {
+    left: calc(26.29% + 33px);
+    right: 24.13%;
+    top: calc(50% - 18px / 2 - 251.5px);
+    bottom: 22.08%;
+  }
+
+  .local-city {
+    height: 18px;
+    left: 39.6%;
+    right: 9.33%;
+    top: calc(50% - 18px / 2 - 251.5px);
+    font-size: 15px;
+    line-height: 18px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .box-city p {
+    height: 36px;
+    left: 5.07%;
+    right: 74.93%;
+    top: calc(50% - 36px / 2 - 296.5px);
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 36px;
+  }
+
+  .change-city {
+    height: 18px;
+    left: 5.6%;
+    right: 66.4%;
+    top: calc(50% - 18px / 2 - 251.5px);
+    font-size: 15px;
+    line-height: 18px;
+  }
+
+  .icon-location {
+    left: calc(26.29% + 33px);
+    right: 24.13%;
+    top: calc(50% - 18px / 2 - 251.5px);
+    bottom: 22.08%;
+  }
+
+  .local-city {
+    height: 18px;
+    left: calc(26.29% + 33px + 25px);
+    right: 9.33%;
+    top: calc(50% - 18px / 2 - 251.5px);
+  }
+}

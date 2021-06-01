@@ -1,5 +1,7 @@
 import React from 'react'
 
+import './City.css';
+
 import { FaLocationArrow } from "react-icons/fa";
 
 const City = (props) => {

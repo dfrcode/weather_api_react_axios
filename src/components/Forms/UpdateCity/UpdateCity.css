@@ -1,0 +1,112 @@
+.form-city {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 579px;
+  height: 97px;
+  position: fixed;
+  left: 96px;
+  top: 81px;
+  background: #ffffff;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  background-color: #ffffff;
+  padding: 31px 139px 30px 32px;
+}
+
+.enter-city {
+  width: 100%;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 36px;
+  color: #000000;
+  border: none;
+  outline: none;
+}
+
+input[type="text"]::-webkit-input-placeholder {
+  color: #000000;
+}
+
+input[type="text"]::-moz-placeholder {
+  color: #000000;
+}
+
+.btn-ok {
+  position: absolute;
+  left: 87.05%;
+  right: 5.18%;
+  top: 32.99%;
+  bottom: 29.9%;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 36px;
+  color: #1086ff;
+  text-transform: uppercase;
+  background-color: #ffffff;
+  border: none;
+  outline: none;
+}
+
+@media screen and (max-width: 750px) {
+  .form-city {
+    width: 400px;
+  }
+
+  .btn-ok {
+    left: 77.05%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .form-city {
+    width: 400px;
+    left: 70px;
+  }
+
+  .btn-ok {
+    left: 77.05%;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .form-city {
+    width: 400px;
+    left: 10px;
+  }
+
+  .btn-ok {
+    left: 77.05%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .form-city {
+    width: 320px;
+    left: 20px;
+  }
+
+  .btn-ok {
+    left: 77.05%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .form-city {
+    width: 300px;
+    left: 10px;
+    padding: 31px 30px 30px 32px;
+  }
+
+  .btn-ok {
+    left: 77.05%;
+  }
+}
+
+@media screen and (max-height: 667px) {
+  .form-city {
+    top: 20px;
+  }
+}

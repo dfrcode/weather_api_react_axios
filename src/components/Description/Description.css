@@ -1,0 +1,17 @@
+.weather-description {
+  width: 100%;
+  height: 48px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 25px;
+  line-height: 30px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+@media screen and (max-height: 640px) {
+  .weather-description {
+    font-size: 14px;
+    line-height: 5px;
+  }
+}

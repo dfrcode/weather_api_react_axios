@@ -1,5 +1,7 @@
 import React from "react";
 
+import "./InfoWeather.css";
+
 const InfoWeather = (props) => {
   const { speed, deg } = props.wind;
   const { humidity, pressure } = props.main;
@@ -43,9 +45,7 @@ const InfoWeather = (props) => {
         </li>
         <li>
           <p className="title">Вероятность дождя</p>
-          <p className="description">
-            {Math.floor(100 - all)}%
-          </p>
+          <p className="description">{Math.floor(100 - all)}%</p>
         </li>
       </ul>
     </div>

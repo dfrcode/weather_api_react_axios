@@ -77,7 +77,7 @@ class App extends Component {
   componentDidMount() {
     navigator.geolocation.getCurrentPosition(
       async (position) => {
-        const res = await axios.get(
+        const res = await axios(
           `${this.apiPath}?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${process.env.REACT_APP_API_KEY}&lang=${this.apiLang}`
         );
         console.log(res.data.name);
