@@ -50,12 +50,6 @@
   opacity: 1;
 }
 
-@media screen and (max-height: 640px) {
-  .box-check-degrees {
-    top: 30px;
-  }
-}
-
 @media screen and (max-width: 480px) {
   .box-check-degrees {
     left: 70.47%;
@@ -71,5 +65,11 @@
     right: 11.47%;
     top: 3.9%;
     bottom: 91.75%;
+  }
+}
+
+@media screen and (max-height: 667px) {
+  .box-check-degrees {
+    top: 30px;
   }
 }

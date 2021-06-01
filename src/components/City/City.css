@@ -52,25 +52,6 @@
   outline: none;
 }
 
-@media screen and (max-height: 640px) {
-  .box-city p {
-    font-size: 32px;
-    top: 10px;
-  }
-
-  .change-city {
-    top: 70px;
-  }
-
-  .icon-location {
-    top: 77px;
-  }
-
-  .local-city {
-    top: 73px;
-  }
-}
-
 @media screen and (max-width: 900px) {
   .box-city p {
     left: 13%;
@@ -255,5 +236,24 @@
     left: calc(26.29% + 33px + 25px);
     right: 9.33%;
     top: calc(50% - 18px / 2 - 251.5px);
+  }
+}
+
+@media screen and (max-height: 667px) {
+  .box-city p {
+    font-size: 32px;
+    top: 10px;
+  }
+
+  .change-city {
+    top: 70px;
+  }
+
+  .icon-location {
+    top: 77px;
+  }
+
+  .local-city {
+    top: 73px;
   }
 }

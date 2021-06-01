@@ -52,19 +52,26 @@
   }
 }
 
-@media screen and (max-width: 420px) {
-    .list-city {
-      top: 90px;
-      left: 20px;
-    }
+@media screen and (max-width: 480px) {
+  .list-city {
+    top: 90px;
+    left: 20px;
   }
+}
+
+@media screen and (max-width: 420px) {
+  .list-city {
+    top: 90px;
+    left: 20px;
+  }
+}
 
 @media screen and (max-width: 376px) {
-    .list-city {
-      top: 90px;
-      left: 25px;
-    }
+  .list-city {
+    top: 90px;
+    left: 25px;
   }
+}
 
 @media screen and (max-width: 360px) {
   .list-city {
